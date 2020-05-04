@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, SalesListActivity::class.java))
         }
 
+        agreement.setOnClickListener {
+            startActivity(Intent(this@MainActivity, AgreementActivity::class.java))
+        }
+
 
     }
 }
