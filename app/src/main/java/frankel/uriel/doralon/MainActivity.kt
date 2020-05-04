@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, AgreementActivity::class.java))
         }
 
+        coffee.setOnClickListener {
+            startActivity(Intent(this@MainActivity, CoffeeActivity::class.java))
+        }
+
         homepage.setOnClickListener {
             val url = "https://www.doralon.co.il/"
             val i = Intent(Intent.ACTION_VIEW, Uri.parse(url))

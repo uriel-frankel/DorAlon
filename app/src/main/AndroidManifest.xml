@@ -22,6 +22,7 @@
         <activity android:name=".StationListActivity"/>
         <activity android:name=".SalesListActivity"/>
         <activity android:name=".AgreementActivity"/>
+        <activity android:name=".CoffeeActivity"/>
 
     </application>
 
