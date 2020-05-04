@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.6"
+        android:layout_weight="0.5"
         android:orientation="vertical">
 
         <TextView
@@ -24,35 +24,37 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="8dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.4"
+        android:layout_margin="8dp"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/navigate"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="@string/navigate_with_waze" />
+            android:background="@drawable/waze" />
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <ImageView
-            android:layout_margin="8dp"
-            android:src="@drawable/ic_brightness_high_black_24dp"
-            android:tint="@color/colorAccent"
-            android:id="@+id/open247"
-            android:layout_gravity="left"
-            android:layout_width="24dp"
-            android:layout_height="24dp" />
+
+            <ImageView
+                android:id="@+id/open247"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="left"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/open24hrs" />
+
             <TextView
-                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="bottom|left"
                 android:text="@string/for_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="@android:color/white" />
         </FrameLayout>
     </LinearLayout>
 
