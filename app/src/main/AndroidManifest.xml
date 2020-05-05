@@ -19,10 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StationListActivity"/>
+        <activity android:name=".StationsListActivity"/>
         <activity android:name=".SalesListActivity"/>
         <activity android:name=".AgreementActivity"/>
         <activity android:name=".CoffeeActivity"/>
+        <activity android:name=".StationActivity"/>
 
     </application>
 

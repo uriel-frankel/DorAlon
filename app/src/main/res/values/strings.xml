@@ -4,4 +4,7 @@
     <string name="sales">מבצעים</string>
     <string name="for_details">לפרטים</string>
     <string name="agreement_rules"><u>תנאי שימוש</u></string>
+    <string name="address">כתובת</string>
+    <string name="phone">טלפון</string>
+    <string name="operation_time">שעות פעילות</string>
 </resources>

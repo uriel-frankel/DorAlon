@@ -3,6 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storePassword 'afterburner'
+            keyPassword 'afterburner'
+            keyAlias = 'doralonapp'
+            storeFile file('/Users/uriel/Downloads/dor.keystore')
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
@@ -18,10 +26,11 @@ android {
         applicationId "frankel.uriel.doralon"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 23
+        versionName "5.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
 
     buildTypes {

@@ -1,6 +1,5 @@
 package frankel.uriel.doralon
 
-import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -16,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
         stationList.setOnClickListener {
-            startActivity(Intent(this@MainActivity, StationListActivity::class.java))
+            startActivity(Intent(this@MainActivity, StationsListActivity::class.java))
         }
         sales.setOnClickListener {
             startActivity(Intent(this@MainActivity, SalesListActivity::class.java))

@@ -2,6 +2,7 @@ package frankel.uriel.doralon.model
 
 import Banner
 import Station
+import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,5 +18,5 @@ interface Api {
 
 //http://doralon.comrax.com/mobile/station/2363/all
     @GET("station/{id}/all")
-    fun getStation(@Path("id") id: String): Call<HashMap<String, Station>>?
+    fun getStation(@Path("id") id: String): Call<JsonObject>?
 }

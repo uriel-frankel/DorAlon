@@ -54,6 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|left"
                 android:text="@string/for_details"
+                android:padding="8dp"
+                android:id="@+id/details"
                 android:textColor="@android:color/white" />
         </FrameLayout>
     </LinearLayout>

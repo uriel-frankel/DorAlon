@@ -16,7 +16,7 @@ import java.util.*
 import javax.security.auth.callback.Callback
 import kotlin.collections.HashMap
 
-class StationListActivity : AppCompatActivity() {
+class StationsListActivity : AppCompatActivity() {
 
     val adapter = StationAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {

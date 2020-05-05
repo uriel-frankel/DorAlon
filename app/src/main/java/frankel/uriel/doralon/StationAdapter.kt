@@ -49,12 +49,19 @@ class StationAdapter : RecyclerView.Adapter<StationAdapter.StationViewHolder>() 
         var open247: View? = null
         var navigateWithWaze: Button? = null
         var name: TextView? = null
+        var details: TextView? = null
         var station: Station? = null
 
         constructor(view: View) : super(view) {
             name = view.findViewById(R.id.name)
             open247 = view.findViewById(R.id.open247)
             navigateWithWaze = view.findViewById(R.id.navigate)
+            details = view.findViewById(R.id.details)
+            details?.setOnClickListener {
+                val intent = Intent(details?.context, StationActivity::class.java)
+                intent.putExtra("id",station?.nid.toString())
+                details?.context?.startActivity(intent)
+            }
             navigateWithWaze?.setOnClickListener {
                 try {
                     val url =
