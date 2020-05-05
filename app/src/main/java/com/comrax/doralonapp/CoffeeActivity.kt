@@ -1,4 +1,4 @@
-package frankel.uriel.doralon
+package com.comrax.doralonapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

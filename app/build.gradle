@@ -23,7 +23,7 @@ android {
         jvmTarget = "1.8"
     }
     defaultConfig {
-        applicationId "frankel.uriel.doralon"
+        applicationId "com.comrax.doralonapp"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 25

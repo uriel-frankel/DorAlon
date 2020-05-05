@@ -1,6 +1,7 @@
-package frankel.uriel.doralon.model
+package com.comrax.doralonapp
 
 import android.app.Application
+import com.comrax.doralonapp.model.Api
 import com.squareup.picasso.OkHttp3Downloader
 import com.squareup.picasso.Picasso
 import okhttp3.ConnectionSpec

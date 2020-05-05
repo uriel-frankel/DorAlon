@@ -1,8 +1,7 @@
-package frankel.uriel.doralon
+package com.comrax.doralonapp
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.View
 import android.widget.FrameLayout
 import kotlinx.android.synthetic.main.activity_main.view.*
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<frankel.uriel.doralon.FirstScreenLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.comrax.doralonapp.FirstScreenLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.comrax.doralonapp.MainActivity">
 
     <ImageView
         android:id="@+id/bg"
@@ -71,4 +71,4 @@
             android:layout_height="32dp"
             android:background="@drawable/icon_fb_home" />
     </LinearLayout>
-</frankel.uriel.doralon.FirstScreenLayout>
+</com.comrax.doralonapp.FirstScreenLayout>

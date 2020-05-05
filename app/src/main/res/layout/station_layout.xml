@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_station"
-    tools:context=".StationActivity">
+    tools:context="com.comrax.doralonapp.StationActivity">
 
     <LinearLayout
         android:id="@+id/container"

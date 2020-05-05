@@ -1,19 +1,14 @@
-package frankel.uriel.doralon
+package com.comrax.doralonapp
 
 import Station
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import frankel.uriel.doralon.model.DorAlonApplication
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.stations_list_layout.*
 import retrofit2.Call
 import retrofit2.Response
 import java.util.*
-import javax.security.auth.callback.Callback
 import kotlin.collections.HashMap
 
 class StationsListActivity : AppCompatActivity() {

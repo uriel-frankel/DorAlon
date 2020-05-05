@@ -1,14 +1,12 @@
-package frankel.uriel.doralon
+package com.comrax.doralonapp
 
 import Banner
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import frankel.uriel.doralon.model.DorAlonApplication
 import kotlinx.android.synthetic.main.sales_layout.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.collections.toList as toList1
 
 class SalesListActivity : AppCompatActivity() {
 

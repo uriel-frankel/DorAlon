@@ -7,7 +7,7 @@
     android:background="@drawable/station_item_bg"
     android:orientation="horizontal"
     android:weightSum="1"
-    tools:context=".StationsListActivity">
+    tools:context="com.comrax.doralonapp.StationsListActivity">
 
     <LinearLayout
         android:layout_width="0dp"

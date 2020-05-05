@@ -1,26 +1,16 @@
-package frankel.uriel.doralon
+package com.comrax.doralonapp
 
-import Station
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.JsonObject
-import frankel.uriel.doralon.model.DorAlonApplication
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.station_layout.*
-import kotlinx.android.synthetic.main.stations_list_layout.*
 import retrofit2.Call
 import retrofit2.Response
-import java.util.*
-import javax.security.auth.callback.Callback
-import kotlin.collections.HashMap
 
 class StationActivity : AppCompatActivity() {
 
@@ -45,20 +35,36 @@ class StationActivity : AppCompatActivity() {
                     address.text = getFiledByName(response, "field_address")
                     phone.text = getFiledByName(response, "field_phone")
                     operationTime.text = getFiledByName(response, "field_time")
-                    header.text = response.body()?.get("nid")?.asString +response.body()?.get("title")?.asString
+                    header.text = response.body()?.get("title")?.asString + if (BuildConfig.DEBUG) {
+                        " " + response.body()?.get("nid")?.asString
+                    } else {
+                        ""
+                    }
 
                     showOrHideField(response = response, name = "field_wifi", view = wifi)
                     showOrHideField(response = response, name = "field_matas", view = matas)
                     showOrHideField(response = response, name = "field_delek98", view = delek98)
-                    showOrHideField(response = response, name = "field_superalonit", view = superalonit)
+                    showOrHideField(
+                        response = response,
+                        name = "field_superalonit",
+                        view = superalonit
+                    )
                     showOrHideField(response = response, name = "field_alonit", view = alonit)
                     showOrHideField(response = response, name = "field_shabbat", view = shabbat)
                     showOrHideField(response = response, name = "field_atm", view = atm)
                     showOrHideField(response = response, name = "field_gas", view = gas)
-                    showOrHideField(response = response, name = "field_better_place", view = better_place)
+                    showOrHideField(
+                        response = response,
+                        name = "field_better_place",
+                        view = better_place
+                    )
                     showOrHideField(response = response, name = "field_wash", view = wash)
-                    showOrHideField(response = response, name = "field_selfservice", view = selfservice)
-                    showOrHideField(response = response, name = "field_24hrs", view = open247 )
+                    showOrHideField(
+                        response = response,
+                        name = "field_selfservice",
+                        view = selfservice
+                    )
+                    showOrHideField(response = response, name = "field_24hrs", view = open247)
 
                     getLatLon(response)
                     navigate.setOnClickListener {
@@ -83,7 +89,12 @@ class StationActivity : AppCompatActivity() {
         }
     }
 
-    private fun showOrHideField(response: Response<JsonObject>, name: String, view: View, goneValue: String? = "0") {
+    private fun showOrHideField(
+        response: Response<JsonObject>,
+        name: String,
+        view: View,
+        goneValue: String? = "0"
+    ) {
         if (getFiledByName(response, name) == goneValue || getFiledByName(response, name) == null) {
             view.visibility = View.GONE
         } else {

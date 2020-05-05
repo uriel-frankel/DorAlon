@@ -1,4 +1,4 @@
-package frankel.uriel.doralon.model
+package com.comrax.doralonapp.model
 
 import Banner
 import Station

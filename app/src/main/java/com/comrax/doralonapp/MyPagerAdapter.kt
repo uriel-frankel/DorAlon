@@ -1,20 +1,11 @@
-package frankel.uriel.doralon
+package com.comrax.doralonapp
 
 import Banner
-import android.app.ActionBar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.viewpager.widget.PagerAdapter
-import androidx.viewpager.widget.ViewPager
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
-import frankel.uriel.doralon.model.DorAlonApplication
 import kotlinx.android.synthetic.main.banner.view.*
-import java.lang.Exception
 
 class MyPagerAdapter : PagerAdapter() {
 
@@ -32,7 +23,8 @@ class MyPagerAdapter : PagerAdapter() {
        val view = LayoutInflater.from(container.context).inflate(R.layout.banner,container,false)
 
         container.addView(view)
-        DorAlonApplication.picasso.load(DorAlonApplication.url + (list?.get(position)?.filepath ?: ""))
+        DorAlonApplication.picasso.load(
+            DorAlonApplication.url + (list?.get(position)?.filepath ?: ""))
         .into(view.image)
         return view
     }

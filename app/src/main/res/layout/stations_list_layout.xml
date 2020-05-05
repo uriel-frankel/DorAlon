@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.comrax.doralonapp.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:background="@drawable/bg_station"
