@@ -35,6 +35,11 @@ class StationAdapter : RecyclerView.Adapter<StationAdapter.StationViewHolder>() 
         list?.get(position)?.let {
             holder.station = it
             holder.name?.text = it.node_title
+            if (it.node_data_field_alonit_field_alonit_value == 1) {
+                holder.alonit?.visibility = View.VISIBLE
+            } else {
+                holder.alonit?.visibility = View.GONE
+            }
             if (it.node_data_field_alonit_field_24hrs_value == 1) {
                 holder.open247?.visibility = View.VISIBLE
             } else {
@@ -47,6 +52,7 @@ class StationAdapter : RecyclerView.Adapter<StationAdapter.StationViewHolder>() 
     class StationViewHolder : ViewHolder {
 
         var open247: View? = null
+        var alonit: View? = null
         var navigateWithWaze: Button? = null
         var name: TextView? = null
         var details: TextView? = null
@@ -55,6 +61,7 @@ class StationAdapter : RecyclerView.Adapter<StationAdapter.StationViewHolder>() 
         constructor(view: View) : super(view) {
             name = view.findViewById(R.id.name)
             open247 = view.findViewById(R.id.open247)
+            alonit = view.findViewById(R.id.alonit)
             navigateWithWaze = view.findViewById(R.id.navigate)
             details = view.findViewById(R.id.details)
             details?.setOnClickListener {
